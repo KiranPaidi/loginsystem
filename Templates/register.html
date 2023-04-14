@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form action="readregister" method="post">
+        {% csrf_token %}
+      <h3 align="center">Registration Page</h3>
+      <table align="center">
+        <tr>
+            <td>UserName</td>
+            <td><input type="text" id="user" name="tbuser" ></td>
+        </tr>
+        <tr>
+            <td>E-Mail</td>
+            <td><input type="text" id="mail" name="tbmail" ></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" id="pass" name="tbpass"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Register"></td>
+        </tr>
+      </table>
+
+    </form>
+</body>
+</html>

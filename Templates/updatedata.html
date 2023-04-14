@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+<table align="center">
+    <tr>
+        <td> Fname </td>
+        <td><input type="text" id="tbfname" name="tbfname" value="{{data.fname}}"></td>
+    </tr>
+     <tr>
+        <td> Lname </td>
+        <td><input type="text" id="tblname" name="tblname" value="{{data.lname}}"></td>
+    </tr>
+    <tr>
+        <td> Mobile </td>
+        <td><input type="text" id="tbmobile" name="tbmobile" value="{{data.mobile}}"></td>
+    </tr>
+    <tr>
+        <td> E-mail </td>
+        <td><input type="text" id="tbmail" name="tbmail" value="{{data.email}}"></td>
+    </tr>
+     <tr>
+        <td> City </td>
+        <td><select name="ddlcity">
+               <option selected>{{ data.city_name }}</option>
+                <option>--select--</option>
+         {% for i in City %}
+            <option>{{ i.city_name }}</option>
+         {% endfor %}
+         </select></td>
+    </tr>
+    <tr>
+        <td> Course </td>
+        <td><select name="ddlcourse">
+            <option selected>{{data.course}}</option>
+            <option>--select--</option>
+        {% for i in Course %}
+            <option>{{ i.course }}</option>
+         {% endfor %}
+        </select></td>
+    </tr>
+        <td> </td>
+    	  <td><input type="submit" value="Display"></td>
+
+   </table>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>{{msg}}</h2>
+<form action="readlogin" method="post">
+    {% csrf_token %}
+    <h3 align="center">Login</h3>
+    <table align="center">
+        <tr>
+            <td>UserName</td>
+            <td><input type="text" id="user" name="tbuser" ></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" id="pass" name="tbpass"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Login"></td>
+        </tr>
+
+    </table>
+</form>
+</body>
+</html>
